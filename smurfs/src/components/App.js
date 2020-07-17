@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 
 import "./App.css";
 import { getSmurfs } from "../actions";
-import SmurfList from "./smurfsList"
+import SmurfList from "./smurfsList";
+import SmurfForm from "./smurfForm";
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
+        <SmurfForm />
         <SmurfList />
       </div>
     );
