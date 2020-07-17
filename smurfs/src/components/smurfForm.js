@@ -15,17 +15,23 @@ const SmurfForm = (props) => {
   const handleChanges = event =>{
     const { name, value } = event.target
     setFormValues({...formValues, [name]: value})
-    console.log(formValues)
   };
   const onSubmit = (event) => {
-    const newSmurf = {...formValues}
-    newSmurf.age = parseInt(newSmurf.age)
-    newSmurf.height = `${newSmurf.height}cm`
     event.preventDefault()
-    props.postSmurf(formValues)
-    setFormValues(initialFormValues)
+    const formatData = newSmurf => {
+      return {
+        ...newSmurf,
+        age: parseInt(newSmurf.age),
+        height: `${newSmurf.height}cm`
+      }
+    }
+    // const newSmurf = {...formValues}
+    // newSmurf.age = parseInt(newSmurf.age)
+    // newSmurf.height = `${newSmurf.height}cm`
 
-  }
+    props.postSmurf(formatData(formValues))
+    setFormValues(initialFormValues)
+  };
   
   return(
     <>

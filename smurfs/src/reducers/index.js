@@ -11,7 +11,7 @@ const initialState = {
   ],
   isLoading: false,
   error: "",
-}
+};
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -34,5 +34,5 @@ export const reducer = (state = initialState, action) => {
       }
     default:
       return state;
-  }
-}
+  };
+};

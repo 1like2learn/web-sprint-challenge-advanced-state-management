@@ -9,10 +9,10 @@ import SmurfForm from "./smurfForm";
 class App extends Component {
   constructor(props) {
     super(props)
-  }
+  };
   componentDidMount(){
     this.props.getSmurfs()
-  }
+  };
   render() {
     return (
       <div className="App">
@@ -21,12 +21,12 @@ class App extends Component {
         <SmurfList />
       </div>
     );
-  }
-}
+  };
+};
 
 const mapStateToProps = state => {
   return {}
-}
+};
 export default connect(
   mapStateToProps,
   { getSmurfs }

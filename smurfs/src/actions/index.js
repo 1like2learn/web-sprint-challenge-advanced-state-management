@@ -18,7 +18,7 @@ export const getSmurfs = () => {
       dispatch({type: ERROR_LOADING, payload: error})
     })
   }
-}
+};
 export const postSmurf = (newSmurf) => {
   return () => {
     axios.post("http://localhost:3333/smurfs", newSmurf)
@@ -30,4 +30,4 @@ export const postSmurf = (newSmurf) => {
     })
 
   }
-}
+};

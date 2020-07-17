@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import Smurf from "./smurf"
+import Smurf from "./smurf";
 
 const SmurfList = (props) => {
   return(
@@ -13,14 +13,14 @@ const SmurfList = (props) => {
       })}
 
     </>
-  )
-}
+  );
+};
 
 const mapStateToProps = state => {
   return {
     smurfs: state.smurfs
   }
-}
+};
 export default connect(
   mapStateToProps,
   {  }
