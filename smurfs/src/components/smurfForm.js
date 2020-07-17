@@ -23,11 +23,8 @@ const SmurfForm = (props) => {
         ...newSmurf,
         age: parseInt(newSmurf.age),
         height: `${newSmurf.height}cm`
-      }
-    }
-    // const newSmurf = {...formValues}
-    // newSmurf.age = parseInt(newSmurf.age)
-    // newSmurf.height = `${newSmurf.height}cm`
+      };
+    };
 
     props.postSmurf(formatData(formValues))
     setFormValues(initialFormValues)

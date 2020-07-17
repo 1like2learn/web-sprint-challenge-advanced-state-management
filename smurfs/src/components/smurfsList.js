@@ -8,7 +8,6 @@ const SmurfList = (props) => {
     <>
       <h2>List of Smurfs</h2>
       {props.smurfs.map((smurf) => {
-        console.log("smurf", smurf)
         return <Smurf smurf={smurf} key={smurf.id}/>
       })}
 
